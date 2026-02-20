@@ -27,3 +27,15 @@ uv run pytest
 ```
 
 Ensure all commands pass before committing changes.
+
+## Jujutsu (jj) Commands
+
+This project uses `jj` (Jujutsu) for version control. Here are some common commands:
+
+*   **Check status**: `jj status`
+*   **Show differences**: `jj diff`
+*   **Create a new commit**: `jj commit -m "Your commit message"`
+*   **Create a new empty commit**: `jj new`
+*   **Describe a commit**: `jj describe -m "Your commit message"`
+*   **View commit history**: `jj log`
+*   **Undo last operation**: `jj undo`
