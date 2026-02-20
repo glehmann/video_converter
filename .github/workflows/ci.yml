@@ -1,0 +1,22 @@
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+    - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
+      with:
+        persist-credentials: false
+    - uses: astral-sh/setup-uv@04224aa8caab79e9c08d41c1ef06d6394aafe6a0
+    - run: uv run ruff format --check .
+    - run: uv run ruff check .
+    - run: uv run ty check
+    - run: uv run pytest
+    - run: uvx zizmor .
