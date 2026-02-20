@@ -252,7 +252,6 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "ffmpeg-python" },
-    { name = "ty" },
 ]
 
 [package.dev-dependencies]
@@ -265,10 +264,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "ffmpeg-python", specifier = ">=0.2.0" },
-    { name = "ty", specifier = ">=0.0.17" },
-]
+requires-dist = [{ name = "ffmpeg-python", specifier = ">=0.2.0" }]
 
 [package.metadata.requires-dev]
 dev = [
