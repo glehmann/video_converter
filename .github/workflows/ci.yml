@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
         with:
           persist-credentials: false
-      - uses: astral-sh/setup-uv@04224aa8caab79e9c08d41c1ef06d6394aafe6a0
+      - uses: astral-sh/setup-uv@2e7ed0e2bb3523ea417fa281f54c8d3a39f96e75
       - run: uvx zizmor .
 
   format:
@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
         with:
           persist-credentials: false
-      - uses: astral-sh/setup-uv@04224aa8caab79e9c08d41c1ef06d6394aafe6a0
+      - uses: astral-sh/setup-uv@2e7ed0e2bb3523ea417fa281f54c8d3a39f96e75
       - run: uv run ruff format --check .
 
   lint:
@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
         with:
           persist-credentials: false
-      - uses: astral-sh/setup-uv@04224aa8caab79e9c08d41c1ef06d6394aafe6a0
+      - uses: astral-sh/setup-uv@2e7ed0e2bb3523ea417fa281f54c8d3a39f96e75
       - run: uv run ruff check .
 
   type_check:
@@ -46,7 +46,7 @@ jobs:
       - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
         with:
           persist-credentials: false
-      - uses: astral-sh/setup-uv@04224aa8caab79e9c08d41c1ef06d6394aafe6a0
+      - uses: astral-sh/setup-uv@2e7ed0e2bb3523ea417fa281f54c8d3a39f96e75
       - run: uv run ty check
 
   test:
@@ -57,5 +57,5 @@ jobs:
       - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
         with:
           persist-credentials: false
-      - uses: astral-sh/setup-uv@04224aa8caab79e9c08d41c1ef06d6394aafe6a0
+      - uses: astral-sh/setup-uv@2e7ed0e2bb3523ea417fa281f54c8d3a39f96e75
       - run: uv run pytest
