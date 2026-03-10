@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Fetch Dependabot metadata
         id: metadata
-        uses: dependabot/fetch-metadata@87f7a48f2fabdf8dacb5ac1853815db156399fe1
+        uses: dependabot/fetch-metadata@8d0679c1916fe1d4f0d74e332511975f0d5f36a1
 
       - name: Enable auto-merge for Dependabot PRs
         if: steps.metadata.outputs.update-type != 'version-update:semver-major'
